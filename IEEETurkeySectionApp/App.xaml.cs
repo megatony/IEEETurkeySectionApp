@@ -65,7 +65,7 @@ namespace IEEETurkeySectionApp
         public static PhoneApplicationFrame RootFrame { get; private set; }
         public static MobileServiceClient MobileService = new MobileServiceClient(
     "https://ieeeturkeysection.azure-mobile.net/",
-    "SkrKIhTWrbaWRMVknUszROBKidQsKW32"
+    "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 );
         public static Conferences currentConference = new Conferences();
         public static News currentNews = new News();
