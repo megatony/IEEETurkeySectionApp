@@ -1,0 +1,57 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="IEEETurkeySectionApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="False">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid>
+        <Grid.Background>
+            <ImageBrush Stretch="UniformToFill" ImageSource="/Assets/bg.jpg" Opacity="0.15"/>
+        </Grid.Background>
+        <Image HorizontalAlignment="Left" Height="77" Margin="104,0,0,0" VerticalAlignment="Top" Width="271" Source="Assets/2000px-IEEE_Logo.svg.png" Stretch="UniformToFill"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="64,192,46,441">
+            <Rectangle x:Name="studentBranchesLogo" HorizontalAlignment="Left" Margin="0,0,50,0" Height="153"  Stroke="White" VerticalAlignment="Top" Width="160" RadiusX="100" RadiusY="100" StrokeThickness="5" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Tap="studentBranchesLogo_Tap">
+                <Rectangle.RenderTransform>
+                    <CompositeTransform SkewY="3.18" TranslateY="4.444"/>
+                </Rectangle.RenderTransform>
+                <Rectangle.Fill>
+                    <ImageBrush Stretch="UniformToFill" ImageSource="Assets/people.png"/>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle x:Name="conferencesLogo" HorizontalAlignment="Left" Height="153" Stroke="White" VerticalAlignment="Top" Width="160" RadiusX="100" RadiusY="100" StrokeThickness="5" Tap="conferencesLogo_Tap">
+                <Rectangle.Fill>
+                    <ImageBrush Stretch="Uniform" ImageSource="Assets/event.png"/>
+                </Rectangle.Fill>
+            </Rectangle>
+
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="64,404,46,234">
+            <Rectangle x:Name="newsLogo" HorizontalAlignment="Left" Margin="0,0,50,0" Height="153"  Stroke="White" VerticalAlignment="Top" Width="160" RadiusX="100" RadiusY="100" StrokeThickness="5" Tap="newsLogo_Tap">
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="Assets/printed.png" Stretch="UniformToFill"/>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle x:Name="committeeLogo" HorizontalAlignment="Left" Height="153"  VerticalAlignment="Top" Width="160" RadiusX="100" RadiusY="100" StrokeThickness="5" Stroke="White" Tap="committeeLogo_Tap">
+                <Rectangle.Fill>
+                    <ImageBrush Stretch="UniformToFill" ImageSource="Assets/commite.png"/>
+                </Rectangle.Fill>
+            </Rectangle>
+        </StackPanel>
+        <TextBlock HorizontalAlignment="Left" Margin="64,359,0,0" TextWrapping="Wrap" Text="student branches" VerticalAlignment="Top" Width="160" Foreground="#FF006699" TextAlignment="Center"/>
+        <TextBlock HorizontalAlignment="Left" Margin="274,359,0,0" TextWrapping="Wrap" Text="conferences" VerticalAlignment="Top" Width="160" Foreground="#FF006699" TextAlignment="Center"/>
+        <TextBlock HorizontalAlignment="Left" Margin="64,571,0,0" TextWrapping="Wrap" Text="news" VerticalAlignment="Top" Width="160" Foreground="#FF006699" TextAlignment="Center"/>
+        <TextBlock HorizontalAlignment="Left" Margin="274,571,0,0" TextWrapping="Wrap" Text="committee" VerticalAlignment="Top" Width="160" Foreground="#FF006699" TextAlignment="Center"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,758,0,0" TextWrapping="Wrap" Text="turkey section mobile application" VerticalAlignment="Top" Width="460" Foreground="#FF006699" TextAlignment="Center" Height="32"/>
+
+    </Grid>
+</phone:PhoneApplicationPage>
